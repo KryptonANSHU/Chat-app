@@ -7,6 +7,23 @@
     <title>Chat App</title>
 </head>
 <body>
-    <h1>Hello</h1>
+    <h1>Hello , Welcome to Chat App</h1>
+
+
+    <!-- connecting the library -->
+    <script src="/socket.io/socket.io.js"></script>         
+    <script type="text/javascript">
+
+     const socket = io();           //Making Connection To BAckend
+
+     socket.on('connect',()=>{  
+         console.log('Connected to Server');
+     })
+
+
+     socket.on('disconnect',()=>{  
+         console.log('DISConnected from Server');
+     })
+    </script>
 </body>
 </html>
